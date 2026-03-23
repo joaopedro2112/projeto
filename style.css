@@ -60,9 +60,8 @@ nav section img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 90px;
     flex-direction: column;
-    margin-top: 50px;
     gap: 20px;
     padding: 20px;
 }
