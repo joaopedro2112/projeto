@@ -87,7 +87,7 @@ nav section img {
     background-color: var(--primary-bg);
 }
 
-.Menu-logo:active .Menu {
+.Menu-logo:hover .Menu {
     display: flex;
     animation: Menu-animation 0.6s ease-in-out forwards;
 }
