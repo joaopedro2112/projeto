@@ -375,6 +375,9 @@ nav section img {
     transform: translateY(0) scale(1);
     filter: blur(0);
 }
+.end-section{
+    height: 30vh;
+}
 @media (min-width: 1024px) {
     .Buttons-reasons:hover {
         background-color: var(--secondary-bg);
