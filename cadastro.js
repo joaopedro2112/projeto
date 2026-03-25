@@ -2,6 +2,7 @@ const menuBtns = document.querySelectorAll(".Menu-logo");
 const menu = document.querySelector(".Menu");
 const links = document.querySelectorAll(".Menu a");
 
+
 menuBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         menu.classList.toggle("active");
@@ -13,6 +14,7 @@ links.forEach(link => {
         menu.classList.remove("active");
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
         "h1, h2, h3, h4, p, a, img:not(.Photos img)"
@@ -36,22 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 });
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // impede reload
-
-  const name = document.querySelector("#name-input").value;
-  const email = document.querySelector("#email-input").value;
-  const password = document.querySelector("#password-input").value;
-
-  if (!name || !email || !password) {
-    alert("Preencha todos os campos");
-    return;
-  }
-
-  alert("Cadastro realizado com sucesso!");
-
-
-  window.location.href = "/project/index.html";
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name-input').value;
+    const email = document.getElementById('email-input').value;
+    
+    window.location.href = `index.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
 });
