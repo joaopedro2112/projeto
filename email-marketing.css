@@ -321,7 +321,136 @@ nav section img {
     gap: 15px;
     flex-direction: column;
 }
+.third-section {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--secondary-bg);
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+.third-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.third-section img {
+    width: 80%;
+}
+.third-section span {
+    color: black;
+    background-color: var(--fourth-bg);
+    padding: 3px;
+    text-align: center;
+}
+.card-payment-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    flex-direction: column;
+    gap: 30px;
+}
+.card-light {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    justify-content: space-around;
+    transition: 0.4s ease-in-out;
+    height: auto;
+    gap: 20px;
+    flex-direction: column;
+}
+.card-light span {
+    color: var(--secondary-bg);
+}
+.card-light div {
+    text-align: left;
+}
+.card-dark {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    justify-content: space-around;
+    background-color: #1E1D23;
+    width: 90%;
+    border-radius: 10px;
+    color: white;
+    height: auto;
+    gap: 20px;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+}
 
+.card-dark span {
+    color: #ff8409;
+}
+.card-dark div {
+    text-align: left;
+}
+.card-dark:focus,
+.card-light:focus {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background-color: #1E1D23;
+}
+.card-dark:focus .Text-front-card,
+.card-light:focus .Text-front-card{
+    display: none;
+}
+.card-dark img,
+.card-light img {
+    width: 50%;
+    display: none;
+}
+.Card-back,
+.Card-back-free {
+    display: none;
+}
+
+.card-light:focus .Card-back-free,
+.card-dark:focus .Card-back{
+
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.card-dark:focus img,
+.card-light:focus img {
+    display: flex;
+    width: 70%;
+}
+
+.Card-back span,
+.Card-back-free span {
+    color: #ff8409;
+}
+.Button-card-back:active {
+    transform: scale(0.9);
+}
+.card-light:focus .Card-back-free {
+    display: flex;
+    gap: 30px;
+}
+.void {
+    width: 100%;
+    height: 30vh;
+}
 @media (min-width:768px) {
     .Menu-logo {
         display: none;
@@ -331,15 +460,31 @@ nav section img {
         width: 40%;
     }
 
-    .card-section {
+    .card-section,
+    .third-section {
         flex-direction: row;
     }
-
+    .third-section img {
+        width: 40%;
+    }
     .secondary-section h4 {
         color: #707070;
 
     }
+    .card-payment-section {
+        flex-direction: row;
+    }
 
+    .text-payment {
+        display: none;
+    }
+    .card-dark,
+    .card-light {
+        width: 40%;
+        box-shadow: 1px 1px 10px #00000035;
+        height: 98.4vh;
+        gap: 20px;
+    }
     .text-section h4 {
         width: 50%;
     }
