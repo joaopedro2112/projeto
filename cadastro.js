@@ -2,7 +2,7 @@ const menuBtns = document.querySelectorAll(".Menu-logo");
 const menu = document.querySelector(".Menu");
 const links = document.querySelectorAll(".Menu a");
 
-
+// MENU
 menuBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         menu.classList.toggle("active");
@@ -15,6 +15,7 @@ links.forEach(link => {
     });
 });
 
+// ANIMAÇÕES
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
         "h1, h2, h3, h4, p, a, img:not(.Photos img)"
@@ -44,5 +45,6 @@ form.addEventListener('submit', function(e) {
     const name = document.getElementById('name-input').value;
     const email = document.getElementById('email-input').value;
     
-    window.location.href = `index.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+    // Redireciona para index.html com parâmetros
+    window.location.href = `email-marketing.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
 });
